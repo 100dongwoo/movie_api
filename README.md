@@ -16,6 +16,14 @@ If you have problem, feel free to ask me ^^
 
 You can watch the tutorial for this app.
 
+if you have error / download boiler_plate source code.<br>
+
+npm i node-pre-gyp<br>
+npm i sqlite3 <br>
+
+
+
+
 https://www.youtube.com/channel/UCFyXA9x8lpL3EYWeYhj4C4Q?view_as=subscriber
 
 
