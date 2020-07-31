@@ -11,7 +11,7 @@ import Footer from "./views/Footer/Footer"
 //null   Anyone Can go inside
 //true   only logged in user can go inside
 //false  logged in user can't go inside
-
+import MovieDetail from "./views/MovieDetail/MovieDetail";
 function App() {
   return (
     <Suspense fallback={(<div>Loading...</div>)}>
@@ -21,6 +21,7 @@ function App() {
           <Route exact path="/" component={Auth(LandingPage, null)} />
           <Route exact path="/login" component={Auth(LoginPage, false)} />
           <Route exact path="/register" component={Auth(RegisterPage, false)} />
+            <Route exact path="/movie/:movieId" component={Auth(MovieDetail, null)} />
         </Switch>
       </div>
       <Footer />
