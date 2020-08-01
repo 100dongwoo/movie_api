@@ -25,7 +25,7 @@ router.post('/favorited', (req, res) => {
 //내가 이영화를 favor리스트에넣었는지 정보확인
     //->그러므로 userfrom정보도 필요
 
-    Favorite.find({"movieID": res.body.movieId, "userFrom": req.body.userFrom})
+    Favorite.find({"movieId": req.body.movieId, "userFrom": req.body.userFrom})
         .exec((err, info) => {
             if (err) return res.status(400).send(err)
 
@@ -59,16 +59,13 @@ router.post('/addToFavorite', (req, res) => {
 
 
     const favorite = new Favorite(req.body)
-    favorite.save();//저장된것,
-
-    favorite((err, doc) => {
+    favorite.save((err, doc) => {
         if (err) return res.status(400).send(err)
         return res.status(200).json({success: true})
     })
 
 
 })
-
 
 
 module.exports = router;

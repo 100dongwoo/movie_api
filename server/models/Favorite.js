@@ -6,15 +6,18 @@ const FavoriteSchema = mongoose.Schema({
         ref: 'User'
     },
     movieId: {
-        type: String,
+        type: String
+    },
+    movieTitle: {
+        type: String
     },
     moviePost: {
         type: String
     },
-    movieRuntime: {
+    movieRunTime: {
         type: String
     }
-},{timestamp:true})
+}, { timestamps: true })
 
 
 const Favorite = mongoose.model('Favorite', FavoriteSchema);

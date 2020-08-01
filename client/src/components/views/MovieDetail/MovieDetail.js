@@ -16,6 +16,9 @@ function MovieDetail(props) {
 
     const [ActorToggle, setActorToggle] = useState(false)
 
+
+
+
     useEffect(() => {   //돔이 로드가되면처음할거
 
         let endpointCrew = `${API_URL}movie/${movieId}/credits?api_key=${API_KEY}`
@@ -32,7 +35,6 @@ function MovieDetail(props) {
             .then(response => {
                 setCasts(response.cast)
             })
-
     }, [])
 
 

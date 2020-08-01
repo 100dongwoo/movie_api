@@ -6,16 +6,16 @@ function Favorite(props) {
 
     const movieId = props.moiveId;
     const userFrom = props.userFrom
-    const movieTile = props.movieInfo.title
+    const movieTitle = props.movieInfo.title
     const moviePost = props.movieInfo.backdrop_path
     const movieRunTime = props.movieInfo.runtime
 
     let variables = {
-        userFrom,           // : userFROM
-        movieId,
-        movieTile,
-        moviePost,
-        movieRunTime
+        userFrom: userFrom,
+        movieId: movieId,
+        movieTitle: movieTitle,
+        moviePost: moviePost,
+        movieRunTime: movieRunTime
     }
     const [FavoriteNumber, setFavoriteNumber] = useState(0)
     const [Favorited, setFavorited] = useState(false)
@@ -85,6 +85,8 @@ function Favorite(props) {
 }
 
 export default Favorite
+
+
 
 
 
