@@ -17,8 +17,6 @@ function MovieDetail(props) {
     const [ActorToggle, setActorToggle] = useState(false)
 
 
-
-
     useEffect(() => {   //돔이 로드가되면처음할거
 
         let endpointCrew = `${API_URL}movie/${movieId}/credits?api_key=${API_KEY}`
@@ -57,7 +55,7 @@ function MovieDetail(props) {
 
 
                 <div style={{display: 'flex', justifyContent: 'flex-end'}}>
-                    <Favorite movieInfo={Movie} moiveId={movieId} userFrom={localStorage.getItem('userId')} />
+                    <Favorite movieInfo={Movie} moiveId={movieId} userFrom={localStorage.getItem('userId')}/>
                 </div>
 
 
@@ -81,8 +79,8 @@ function MovieDetail(props) {
                             <GridCards
                                 image={cast.profile_path ?
                                     `${IMAGE_BASE_URL}w500${cast.profile_path}` : null}
-
                                 charcterName={cast.name}
+
                             />
                         </React.Fragment>
 
